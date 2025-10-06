@@ -1,0 +1,246 @@
+/* ========== BODY Y FONDO GENERAL ========== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f5f7fa, #e9f0f7);
+  color: #333;
+}
+
+/* ========== CONTENEDOR PRINCIPAL ========== */
+.activity-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  min-height: 100vh;
+}
+
+/* ========== FORMULARIO PERFIL ========== */
+.activity-container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  width: 100%;
+  max-width: 850px;
+  transition: all 0.3s ease;
+}
+
+.activity-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.15);
+}
+
+.activity-container h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #2d7a4b;
+  margin-bottom: 25px;
+  font-weight: 700;
+  position: relative;
+}
+
+.activity-container h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #5eb319;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ========== IMAGEN PERFIL ========== */
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.preview-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #5eb319;
+  object-fit: cover;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.preview-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.image-input {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #5eb319;
+  background: #eefaf2;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.image-input:hover {
+  background: #d9f0d6;
+}
+
+/* ========== INPUTS, SELECT, TEXTAREA ========== */
+.activity-container input,
+.activity-container select,
+.activity-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border: 1px solid #d0d7de;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.activity-container input:focus,
+.activity-container select:focus,
+.activity-container textarea:focus {
+  border-color: #5eb319;
+  box-shadow: 0 0 8px rgba(94,179,25,0.2);
+  outline: none;
+  background: #fff;
+}
+
+/* ========== BOTÓN REGISTRAR ========== */
+.btnregisterxd {
+  background: linear-gradient(135deg, #5eb319, #4b8e15);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnregisterxd:hover {
+  background: linear-gradient(135deg, #6fc91f, #3f6b12);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+/* ========== GRID DE INSTRUCTORES ========== */
+.grid-instructores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 25px;
+}
+
+.card-instructor {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.card-instructor:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+}
+
+.imagen-instructor {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 3px solid #5eb319;
+}
+
+.card-instructor h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #2d3436;
+  font-weight: 700;
+}
+
+.card-instructor p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ========== MODAL ========== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 20px;
+  padding: 35px;
+  width: 90%;
+  max-width: 550px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.modal-content img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid #5eb319;
+  margin-bottom: 18px;
+}
+
+.modal-content h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #2d7a4b;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #5eb319;
+  transition: all 0.3s ease;
+}
+
+.close:hover {
+  color: #ff5252;
+  transform: scale(1.2);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0);}
+  to {transform: scale(1);}
+}
